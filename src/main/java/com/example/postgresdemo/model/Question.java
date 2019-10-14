@@ -52,4 +52,3 @@ public class Question extends com.example.databaseauditmodel.model.AuditModel {
 
     // Getters and Setters (Omitted for brevity)
 }
-

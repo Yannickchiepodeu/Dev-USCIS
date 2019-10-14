@@ -57,4 +57,3 @@ public class Answer<Question> extends AuditModel {
     // Getters and Setters (Omitted for brevity)
 }
 
-
