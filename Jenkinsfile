@@ -1,44 +1,18 @@
-pipeline {
-   agent any
-       stages {  
-     stage('one') {
-                   puts 'Hi ,this is yannick from virginia'
-                  }
-               }
-             stage('two'){
-           
-            steps {
-                input('Do you want to procced?')
-               }
-                  } 
-                 stage('three') {
-                 when {
-                       not{ 
-                              branch "master"
-                       }          
-                  }                         
-               steps {  
-                       puts "Hello"
-                  }      
-               }     
-   stage('four')  {
-      parallel {
-         stage('unite test') {
-            steps {
-               puts "running unit test...."
-            }
-         }
-         stage('integration test') {
-            agent {
-               docker { 
-                  reuseNode false
-                  image 'ubuntu'
-               }
-            }
-         steps {
-            puts 'running the ingration test..'
-         }
-      }
-   }
+node {
+    stage ("testing") {
+        def list = ["abc", "def"]
+        listIterator(list)
+        listIterator2(list)
+        println "done."
+    }
 }
+
+@NonCPS
+def listIterator(List<String> list) {
+    list.each { item -> println "item[${item}]" }
+}
+
+@NonCPS
+def listIterator2(List<String> list) {
+    list.each { item -> echo "item[${item}]" }
 }
