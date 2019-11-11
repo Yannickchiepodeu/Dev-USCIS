@@ -3,7 +3,6 @@ pipeline {
        stages {  
      stage('one') {
                    echo 'Hi ,this is yannick from virginia'
-                   
                   }
                }
              stage('two'){
