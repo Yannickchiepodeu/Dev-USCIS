@@ -17,9 +17,20 @@ pipeline {
                        not{ 
                               branch "master"
                        }          
-               }                         
+                  }                         
                steps {  
                        echo "Hello"
-                }      
-          }     
-               
+                  }      
+               }     
+   stage('four')  {{
+      parallel {
+         stage('unite test') {
+            steps {
+               echo "running unit test...."
+            }
+         }
+         steps {
+            running the ingration test.."
+         }
+      }
+   }
