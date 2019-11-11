@@ -29,7 +29,7 @@ pipeline {
             }
          }
          steps {
-            running the ingration test.."
+            echo "running the ingration test.."
          }
       }
    }
