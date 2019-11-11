@@ -2,7 +2,7 @@ pipeline {
    agent any
        stages {  
      stage('one') {
-                   println 'Hi ,this is yannick from virginia'
+                   puts 'Hi ,this is yannick from virginia'
                   }
                }
              stage('two'){
@@ -18,14 +18,14 @@ pipeline {
                        }          
                   }                         
                steps {  
-                       println "Hello"
+                       puts "Hello"
                   }      
                }     
    stage('four')  {
       parallel {
          stage('unite test') {
             steps {
-               println "running unit test...."
+               puts "running unit test...."
             }
          }
          stage('integration test') {
@@ -36,7 +36,7 @@ pipeline {
                }
             }
          steps {
-            println 'running the ingration test..'
+            puts 'running the ingration test..'
          }
       }
    }
