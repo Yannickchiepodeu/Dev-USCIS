@@ -22,7 +22,7 @@ pipeline {
                        echo "Hello"
                   }      
                }     
-   stage('four')  {{
+   stage('four')  {
       parallel {
          stage('unite test') {
             steps {
